@@ -11,25 +11,8 @@ Este proyecto utiliza Terraform para desplegar un clúster de Azure Kubernetes S
 ## Diagrama de arquitectura
 
 
-graph TD
-    A[Terraform] -->|Despliegue| B[Azure Resource Group]
-    B -->|Contiene| C[AKS Cluster]
-    C -->|Ejecuta| D[Kubernetes]
-    D -->|Namespace: monitoring| E[Helm]
-    E -->|Instala| F[kube-prometheus-stack]
-    F -->|Incluye| G[Prometheus]
-    F -->|Incluye| H[Grafana]
-    F -->|Incluye| I[Alertmanager]
-    
-    classDef azure fill:#0072C6,stroke:#005999,color:white
-    classDef k8s fill:#326CE5,stroke:#254B99,color:white
-    classDef tools fill:#767676,stroke:#505050,color:white
-    classDef monitoring fill:#E4405F,stroke:#B3293F,color:white
-    
-    class B,C azure
-    class D,E k8s
-    class A tools
-    class F,G,H,I monitoring
+![imagen](https://github.com/user-attachments/assets/907f9f3f-2fe4-481d-b1e9-6c9296577dc2)
+
 
 ## Requisitos previos
 
